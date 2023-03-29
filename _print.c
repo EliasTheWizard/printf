@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _printf - Receives the main string and all the necessary parameters to
- * print a formated string
+ * _printf - Function to convert characters from main string
+ * 
  * @format: A string containing all the desired characters
  * Return: A total count of the characters printed
  */
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(arg_list, format);
-	/*Calling parser function*/
+	/*Parser Called*/
 	printed_chars = parser(format, f_list, arg_list);
 	va_end(arg_list);
 	return (printed_chars);
